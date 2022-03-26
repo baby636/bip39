@@ -15,7 +15,9 @@
     "prettier": "prettier 'ts_src/**/*.ts' --ignore-path ./.prettierignore",
     "test": "npm run build && npm run format:ci && npm run lint && npm run unit",
     "unit": "tape test/*.js",
-    "update": "node -e \"require('./util/wordlists').update()\""
+    "update": "node -e \"require('./util/wordlists').update()\"",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "author": "Wei Lu",
   "contributors": [
@@ -38,7 +40,8 @@
     "@types/node": "11.11.6",
     "create-hash": "^1.1.0",
     "pbkdf2": "^3.0.9",
-    "randombytes": "^2.0.1"
+    "randombytes": "^2.0.1",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@types/create-hash": "1.2.0",
@@ -51,5 +54,6 @@
     "tape": "^4.13.2",
     "tslint": "^6.1.0",
     "typescript": "3.3.4000"
-  }
+  },
+  "snyk": true
 }
