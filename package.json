@@ -45,7 +45,7 @@
     "@types/pbkdf2": "3.0.0",
     "@types/randombytes": "2.0.0",
     "node-fetch": "^2.6.1",
-    "nyc": "^15.0.0",
+    "nyc": "^15.0.1",
     "prettier": "1.16.4",
     "proxyquire": "^1.7.10",
     "tape": "^4.13.2",
